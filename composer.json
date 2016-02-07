@@ -1,0 +1,42 @@
+{
+    "name": "biberlabs/mocker",
+    "type": "project",
+    "homepage": "https://github.com/biberlabs/mocker",
+    "license": "",
+    "authors": [
+        {
+            "name": "Haydar KULEKCI",
+            "homepage": "http://kulekci.net/"
+        }
+    ],
+    "require": {
+        "php": "^5.5 || ^7.0",
+        "doctrine/annotations": "*",
+        "symfony/finder": "*",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mocker\\": "src/Mocker/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MockerTest\\": "test/MockerTest/",
+            "UserEntity\\": "example/UserEntity/",
+            "AddressEntity\\": "example/AddressEntity/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs",
+            "@test"
+        ],
+        "cs": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit"
+    }
+}
